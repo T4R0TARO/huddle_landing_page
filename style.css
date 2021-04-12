@@ -1,0 +1,169 @@
+/*===================================================
+    Custom Properties 
+======================================================*/
+/* Variables set to call for color value by using var() */
+:root {
+    --background-violet: hsl(257, 40%, 49%);
+    --button-smagenta: hsl(300, 69%, 71%);
+}
+
+/*===================================================
+        Base Style
+======================================================*/
+html {
+    box-sizing: border-box; 
+    font-size: 100%;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    display: flex;
+    flex-direction: column; /* Change to column to ad mobile-use*/
+    min-height: 100vh;
+    margin: 40px; /*Set on body to center content*/
+    background: var(--background-violet); 
+    background-image: url(images/bg-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    overflow: auto;
+}
+
+/*===================================================
+    Huddle Logo 
+======================================================*/
+/* Huddle log with a width set value of 125px will keep the img from
+    exapanding with the vp if with expands, in other terms the img
+    will remain the same size regardless of the screen size */
+
+.logo img{
+    width: 125px;
+    height: auto;
+    margin-bottom:70px;
+}
+/*===================================================
+    Huddle Image 
+======================================================*/
+/* Mock img wisth set to 100% so that the image may fill the entire 
+    width of the viewport. In other words when the user expands the 
+    screen the img will grow with the screen*/
+
+/* The property max-width is used so that the img that was 
+    selected as a limit on how much it can expand. In this 
+    example the img will stop expanding at 930px */
+
+.mock__img img {
+    margin: auto;
+    width: 100%;
+    max-width: 930px;
+}  
+
+/*===================================================
+    Main Text
+======================================================*/
+/* * Controls the main text of the page. The max-width property is
+    used so that we set a limit to the width if the user decides 
+    to expand the browsers.
+    * The margin property with the top value 0 and auto the text
+    content is centered even if the user expands the browsers    */
+.main__text {
+    text-align: center;
+    max-width: 420px;
+    margin: 0 auto;
+}
+
+.main__text h1 {
+    margin-top: 70px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.main__text p {
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 30px;
+}
+/*===================================================
+    Register Button 
+======================================================*/
+
+.reg__btn {
+    border: none;
+    width: 250px;
+    padding: 1.25rem;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 2.25rem;
+    margin-top: 25px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: var(--background-violet);
+    box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.reg__btn:hover {
+    background-color: var(--button-smagenta);
+    color: #fff;
+}
+/*===================================================
+    Social Links 
+======================================================*/
+
+.social__links {
+    margin: 65px;
+    justify-content: space-between;
+}
+
+.social__links i {
+    padding: 7px;
+    margin-right: 15px;
+    border: #fff 2px solid;
+    border-radius: 50%;
+    color: #fff;
+}
+
+.social__links i:hover {
+    color: var(--button-smagenta);
+    border: var(--button-smagenta) 2px solid; 
+}
+
+/*===================================================
+    Main Footer 
+======================================================*/
+
+.attribution {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+}
+
+/*===================================================
+    Media-Queries
+======================================================*/
+@media screen and (min-width: 1080px) {
+    body {
+        overflow: hidden;
+        background-image: url(images/bg-desktop.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .column {
+        float: left;
+        width: 50%;
+    }
+    .main__text{
+        text-align: left;
+    }
+    .social__links {
+       display: flex;
+       justify-content: flex-end;
+       margin: 350px -95px 0px 0px;
+    }
+    .mock__img img {
+        margin-left: 40px;
+    }  
+}
