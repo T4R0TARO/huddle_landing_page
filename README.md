@@ -29,6 +29,9 @@ Users should be able to:
 - See hover states for all interactive elements on the page
 
 ### Screenshot
+![Screenshot_2021-04-19 Frontend Mentor Huddle landing page with single introductory section(1)](https://user-images.githubusercontent.com/76195521/115321950-d2fdfa80-a139-11eb-847a-14daea8e1051.png)
+
+![Screenshot_2021-04-19 Frontend Mentor Huddle landing page with single introductory section](https://user-images.githubusercontent.com/76195521/115321979-e315da00-a139-11eb-9c5c-f0289cdbadba.png)
 
 ### Links
 
